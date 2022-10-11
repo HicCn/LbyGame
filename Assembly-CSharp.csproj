@@ -61,7 +61,7 @@
     <Compile Include="Assets\GameScript\FramdCode\LogicalControl.cs" />
     <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONDotNetTypes.cs" />
     <Compile Include="Assets\TableData\LubanLib\ITypeId.cs" />
-    <Compile Include="Assets\GameScript\FramdCode\BasicDefine.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\BasicDefine.cs" />
     <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONBinary.cs" />
     <Compile Include="Assets\GameScript\GameData\logic.cs" />
     <Compile Include="Assets\GameScript\GameData\TBlogic.cs" />
@@ -75,6 +75,9 @@
     <Compile Include="Assets\GameScript\GameData\Tables.cs" />
     <Compile Include="Assets\GameScript\FramdCode\GamerControl.cs" />
     <Compile Include="Assets\GameScript\StartGame.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\textual.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\logic.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\Luban.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TableData\LubanLib\SimpleJSON\Changelog.txt" />
