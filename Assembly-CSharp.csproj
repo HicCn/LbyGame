@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A43ABD9F-0386-439A-7E7C-42A04716D8FF}</ProjectGuid>
+    <ProjectGuid>{0F7CCAFD-BE71-092D-7ECC-C1671947F150}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -56,11 +56,28 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\WordScript.cs" />
-    <Compile Include="Assets\Script\BoxScript.cs" />
-    <Compile Include="Assets\Script\PressScript.cs" />
-    <Compile Include="Assets\Script\gamerScript.cs" />
-    <Compile Include="Assets\Script\clickScript.cs" />
+    <Compile Include="Assets\TableData\LubanLib\ByteBuf.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\MapBoxMove.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\LogicalControl.cs" />
+    <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONDotNetTypes.cs" />
+    <Compile Include="Assets\TableData\LubanLib\ITypeId.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\BasicDefine.cs" />
+    <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONBinary.cs" />
+    <Compile Include="Assets\GameScript\GameData\logic.cs" />
+    <Compile Include="Assets\GameScript\GameData\TBlogic.cs" />
+    <Compile Include="Assets\GameScript\GameData\textual.cs" />
+    <Compile Include="Assets\TableData\LubanLib\StringUtil.cs" />
+    <Compile Include="Assets\TableData\LubanLib\BeanBase.cs" />
+    <Compile Include="Assets\GameScript\GameData\Tbtextual.cs" />
+    <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONUnity.cs" />
+    <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSON.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\MapBoxControl.cs" />
+    <Compile Include="Assets\GameScript\GameData\Tables.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\GamerControl.cs" />
+    <Compile Include="Assets\GameScript\StartGame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TableData\LubanLib\SimpleJSON\Changelog.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

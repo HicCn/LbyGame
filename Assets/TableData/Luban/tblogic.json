@@ -1,0 +1,37 @@
+[
+  {
+    "storyID": 0,
+    "nextStoryIsA": 1,
+    "nextStoryIsB": 1,
+    "nextStoryIsC": 2,
+    "nextStoryIsD": 2
+  },
+  {
+    "storyID": 1,
+    "nextStoryIsA": 3,
+    "nextStoryIsB": 3,
+    "nextStoryIsC": 4,
+    "nextStoryIsD": 4
+  },
+  {
+    "storyID": 2,
+    "nextStoryIsA": -1,
+    "nextStoryIsB": -1,
+    "nextStoryIsC": -1,
+    "nextStoryIsD": -1
+  },
+  {
+    "storyID": 3,
+    "nextStoryIsA": -1,
+    "nextStoryIsB": -1,
+    "nextStoryIsC": -1,
+    "nextStoryIsD": -1
+  },
+  {
+    "storyID": 4,
+    "nextStoryIsA": -1,
+    "nextStoryIsB": -1,
+    "nextStoryIsC": -1,
+    "nextStoryIsD": -1
+  }
+]
