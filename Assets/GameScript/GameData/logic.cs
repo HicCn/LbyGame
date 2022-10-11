@@ -19,20 +19,14 @@ public sealed partial class logic :  Bright.Config.BeanBase
     public logic(JSONNode _json) 
     {
         { if(!_json["storyID"].IsNumber) { throw new SerializationException(); }  StoryID = _json["storyID"]; }
-        { if(!_json["nextStoryIsA"].IsNumber) { throw new SerializationException(); }  NextStoryIsA = _json["nextStoryIsA"]; }
-        { if(!_json["nextStoryIsB"].IsNumber) { throw new SerializationException(); }  NextStoryIsB = _json["nextStoryIsB"]; }
-        { if(!_json["nextStoryIsC"].IsNumber) { throw new SerializationException(); }  NextStoryIsC = _json["nextStoryIsC"]; }
-        { if(!_json["nextStoryIsD"].IsNumber) { throw new SerializationException(); }  NextStoryIsD = _json["nextStoryIsD"]; }
+        { var __json0 = _json["nextStory"]; if(!__json0.IsArray) { throw new SerializationException(); } int _n0 = __json0.Count; NextStory = new int[_n0]; int __index0=0; foreach(JSONNode __e0 in __json0.Children) { int __v0;  { if(!__e0.IsNumber) { throw new SerializationException(); }  __v0 = __e0; }  NextStory[__index0++] = __v0; }   }
         PostInit();
     }
 
-    public logic(int storyID, int nextStoryIsA, int nextStoryIsB, int nextStoryIsC, int nextStoryIsD ) 
+    public logic(int storyID, int[] nextStory ) 
     {
         this.StoryID = storyID;
-        this.NextStoryIsA = nextStoryIsA;
-        this.NextStoryIsB = nextStoryIsB;
-        this.NextStoryIsC = nextStoryIsC;
-        this.NextStoryIsD = nextStoryIsD;
+        this.NextStory = nextStory;
         PostInit();
     }
 
@@ -48,19 +42,7 @@ public sealed partial class logic :  Bright.Config.BeanBase
     /// <summary>
     /// 评分A时跳转
     /// </summary>
-    public int NextStoryIsA { get; private set; }
-    /// <summary>
-    /// 评分B时跳转
-    /// </summary>
-    public int NextStoryIsB { get; private set; }
-    /// <summary>
-    /// 评分C时跳转
-    /// </summary>
-    public int NextStoryIsC { get; private set; }
-    /// <summary>
-    /// 评分D时跳转
-    /// </summary>
-    public int NextStoryIsD { get; private set; }
+    public int[] NextStory { get; private set; }
 
     public const int __ID__ = 103149406;
     public override int GetTypeId() => __ID__;
@@ -78,10 +60,7 @@ public sealed partial class logic :  Bright.Config.BeanBase
     {
         return "{ "
         + "StoryID:" + StoryID + ","
-        + "NextStoryIsA:" + NextStoryIsA + ","
-        + "NextStoryIsB:" + NextStoryIsB + ","
-        + "NextStoryIsC:" + NextStoryIsC + ","
-        + "NextStoryIsD:" + NextStoryIsD + ","
+        + "NextStory:" + Bright.Common.StringUtil.CollectionToString(NextStory) + ","
         + "}";
     }
     

@@ -19,16 +19,16 @@ public sealed partial class textual :  Bright.Config.BeanBase
     public textual(JSONNode _json) 
     {
         { if(!_json["storyID"].IsNumber) { throw new SerializationException(); }  StoryID = _json["storyID"]; }
-        { if(!_json["storyMain"].IsString) { throw new SerializationException(); }  StoryMain = _json["storyMain"]; }
-        { if(!_json["mapBoxGenerate"].IsString) { throw new SerializationException(); }  MapBoxGenerate = _json["mapBoxGenerate"]; }
+        { if(!_json["storyChapter"].IsString) { throw new SerializationException(); }  StoryChapter = _json["storyChapter"]; }
+        { if(!_json["playInput"].IsString) { throw new SerializationException(); }  PlayInput = _json["playInput"]; }
         PostInit();
     }
 
-    public textual(int storyID, string storyMain, string mapBoxGenerate ) 
+    public textual(int storyID, string storyChapter, string playInput ) 
     {
         this.StoryID = storyID;
-        this.StoryMain = storyMain;
-        this.MapBoxGenerate = mapBoxGenerate;
+        this.StoryChapter = storyChapter;
+        this.PlayInput = playInput;
         PostInit();
     }
 
@@ -44,11 +44,11 @@ public sealed partial class textual :  Bright.Config.BeanBase
     /// <summary>
     /// 故事内容
     /// </summary>
-    public string StoryMain { get; private set; }
+    public string StoryChapter { get; private set; }
     /// <summary>
     /// 大写WASD代表点按已经需要按下的按键，B表示长按开始，-表示长按中，b表示长按结束
     /// </summary>
-    public string MapBoxGenerate { get; private set; }
+    public string PlayInput { get; private set; }
 
     public const int __ID__ = -1417817325;
     public override int GetTypeId() => __ID__;
@@ -66,8 +66,8 @@ public sealed partial class textual :  Bright.Config.BeanBase
     {
         return "{ "
         + "StoryID:" + StoryID + ","
-        + "StoryMain:" + StoryMain + ","
-        + "MapBoxGenerate:" + MapBoxGenerate + ","
+        + "StoryChapter:" + StoryChapter + ","
+        + "PlayInput:" + PlayInput + ","
         + "}";
     }
     

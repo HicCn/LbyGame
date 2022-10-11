@@ -32,6 +32,6 @@ public class StartGame : MonoBehaviour
             boxControl.GetObject();
         }
         //更新玩家位置坐标
-        DecisionLine = gamer.GetXplace();
+       // DecisionLine = gamer.GetXplace();
     }
 }

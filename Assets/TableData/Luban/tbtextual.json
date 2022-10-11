@@ -1,27 +1,27 @@
 [
   {
     "storyID": 0,
-    "storyMain": "小明看见有座山",
-    "mapBoxGenerate": "SSSDBbA"
+    "storyChapter": "小明看见有座山",
+    "playInput": "SSSDBbA"
   },
   {
     "storyID": 1,
-    "storyMain": "突然很想搬走它",
-    "mapBoxGenerate": "asBbB-b"
+    "storyChapter": "突然很想搬走它",
+    "playInput": "asBbB-b"
   },
   {
     "storyID": 2,
-    "storyMain": "突然好想睡觉啊",
-    "mapBoxGenerate": "asBbB-b"
+    "storyChapter": "突然好想睡觉啊",
+    "playInput": "asBbB-b"
   },
   {
     "storyID": 3,
-    "storyMain": "搬了五百年，终于搬完拉",
-    "mapBoxGenerate": "ASB-bWASDW"
+    "storyChapter": "搬了五百年，终于搬完拉",
+    "playInput": "ASB-bWASDW"
   },
   {
     "storyID": 4,
-    "storyMain": "搬了三天，摆烂了",
-    "mapBoxGenerate": "AWSDB-b"
+    "storyChapter": "搬了三天，摆烂了",
+    "playInput": "AWSDB-b"
   }
 ]
