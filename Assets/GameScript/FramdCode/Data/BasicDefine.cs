@@ -17,9 +17,9 @@ public class BasicDefine : MonoBehaviour
 
 
     ///<summary>
-    ///地块宽度
+    ///地块宽度的一半
     ///</summary>
-    public static int BoxWidthLen = 4;
+    public static int BoxWidthLen = 2;
 
     ///<summary>
     ///地图宽度
@@ -29,6 +29,6 @@ public class BasicDefine : MonoBehaviour
     ///<summary>
     ///地块速度
     ///</summary>
-    public static int BoxSpeed = 4;
+    public static float BoxSpeed = 8f;
 
 }
