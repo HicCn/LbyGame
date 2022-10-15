@@ -18,14 +18,14 @@ public sealed partial class logic :  Bright.Config.BeanBase
 {
     public logic(JSONNode _json) 
     {
-        { if(!_json["storyID"].IsNumber) { throw new SerializationException(); }  StoryID = _json["storyID"]; }
+        { if(!_json["ID"].IsNumber) { throw new SerializationException(); }  ID = _json["ID"]; }
         { var __json0 = _json["nextStory"]; if(!__json0.IsArray) { throw new SerializationException(); } int _n0 = __json0.Count; NextStory = new int[_n0]; int __index0=0; foreach(JSONNode __e0 in __json0.Children) { int __v0;  { if(!__e0.IsNumber) { throw new SerializationException(); }  __v0 = __e0; }  NextStory[__index0++] = __v0; }   }
         PostInit();
     }
 
-    public logic(int storyID, int[] nextStory ) 
+    public logic(int ID, int[] nextStory ) 
     {
-        this.StoryID = storyID;
+        this.ID = ID;
         this.NextStory = nextStory;
         PostInit();
     }
@@ -38,7 +38,7 @@ public sealed partial class logic :  Bright.Config.BeanBase
     /// <summary>
     /// 文本段标记
     /// </summary>
-    public int StoryID { get; private set; }
+    public int ID { get; private set; }
     /// <summary>
     /// 评分A时跳转
     /// </summary>
@@ -59,7 +59,7 @@ public sealed partial class logic :  Bright.Config.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "StoryID:" + StoryID + ","
+        + "ID:" + ID + ","
         + "NextStory:" + Bright.Common.StringUtil.CollectionToString(NextStory) + ","
         + "}";
     }

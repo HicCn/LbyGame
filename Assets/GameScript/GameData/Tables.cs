@@ -16,6 +16,7 @@ public sealed partial class Tables
 {
     public Tbtextual Tbtextual {get; }
     public TBlogic TBlogic {get; }
+    public song.Tbtest Tbtest {get; }
 
     public Tables(System.Func<string, JSONNode> loader)
     {
@@ -24,10 +25,13 @@ public sealed partial class Tables
         tables.Add("Tbtextual", Tbtextual);
         TBlogic = new TBlogic(loader("tblogic")); 
         tables.Add("TBlogic", TBlogic);
+        Tbtest = new song.Tbtest(loader("song_tbtest")); 
+        tables.Add("song.Tbtest", Tbtest);
         PostInit();
 
         Tbtextual.Resolve(tables); 
         TBlogic.Resolve(tables); 
+        Tbtest.Resolve(tables); 
         PostResolve();
     }
 
@@ -35,6 +39,7 @@ public sealed partial class Tables
     {
         Tbtextual.TranslateText(translator); 
         TBlogic.TranslateText(translator); 
+        Tbtest.TranslateText(translator); 
     }
     
     partial void PostInit();

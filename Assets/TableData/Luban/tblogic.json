@@ -1,6 +1,6 @@
 [
   {
-    "storyID": 0,
+    "ID": 0,
     "nextStory": [
       1,
       1,
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "storyID": 1,
+    "ID": 1,
     "nextStory": [
       3,
       3,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "storyID": 2,
+    "ID": 2,
     "nextStory": [
       -1,
       -1,
@@ -27,7 +27,7 @@
     ]
   },
   {
-    "storyID": 3,
+    "ID": 3,
     "nextStory": [
       -1,
       -1,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "storyID": 4,
+    "ID": 4,
     "nextStory": [
       -1,
       -1,

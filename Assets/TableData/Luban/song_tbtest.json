@@ -1,0 +1,72 @@
+[
+  {
+    "ID": 0,
+    "generationDowmTime": 1000,
+    "generationType": 1,
+    "isEnd": false,
+    "isButton": "w"
+  },
+  {
+    "ID": 1,
+    "generationDowmTime": 3000,
+    "generationType": 1,
+    "isEnd": false,
+    "isButton": "a"
+  },
+  {
+    "ID": 2,
+    "generationDowmTime": 5000,
+    "generationType": 1,
+    "isEnd": false,
+    "isButton": "a"
+  },
+  {
+    "ID": 3,
+    "generationDowmTime": 8000,
+    "generationType": 1,
+    "isEnd": true,
+    "isButton": "s"
+  },
+  {
+    "ID": 4,
+    "generationDowmTime": 9000,
+    "generationType": 2,
+    "isEnd": false,
+    "isButton": "b"
+  },
+  {
+    "ID": 5,
+    "generationDowmTime": 11000,
+    "generationType": 2,
+    "isEnd": false,
+    "isButton": "b"
+  },
+  {
+    "ID": 6,
+    "generationDowmTime": 16000,
+    "generationType": 1,
+    "isEnd": true,
+    "isButton": "w"
+  },
+  {
+    "ID": 7,
+    "generationDowmTime": 21000,
+    "generationType": 2,
+    "isEnd": false,
+    "isButton": "b"
+  },
+  {
+    "ID": 8,
+    "generationDowmTime": 25000,
+    "generationType": 3,
+    "isEnd": false,
+    "isButton": "b"
+  },
+  {
+    "ID": 9,
+    "generationDowmTime": 30000,
+    "generationType": 1,
+    "isEnd": true,
+    "isButton": "w"
+  }
+]

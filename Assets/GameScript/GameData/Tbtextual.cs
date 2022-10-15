@@ -28,7 +28,7 @@ public sealed partial class Tbtextual
         {
             var _v = textual.Deserializetextual(_row);
             _dataList.Add(_v);
-            _dataMap.Add(_v.StoryID, _v);
+            _dataMap.Add(_v.ID, _v);
         }
         PostInit();
     }

@@ -6,15 +6,24 @@ namespace FramdCode
 {
     public class MapBoxControl : MonoBehaviour
     {
+        private static MapBoxControl mapBoxControl;
+
         GameObject mapBox;
-        static Queue<GameObject> queue = new Queue<GameObject>();
+        Test TestSevice = new();
+        static readonly Queue<GameObject> queue = new();
         //对象池定义
         Vector2 startPosition = new Vector2(BasicDefine.MapWidthLen+2, BasicDefine.startPositionY);
 
-        public MapBoxControl()
+        private MapBoxControl()
         {
             mapBox = Resources.Load<GameObject>("map_box");
             MapBoxControlInitialize();
+        }
+
+        public static MapBoxControl Instance()
+        {
+            mapBoxControl ??= new MapBoxControl();
+            return mapBoxControl;
         }
 
         //初始化
@@ -37,12 +46,19 @@ namespace FramdCode
         }
 
         //对象池中取出对象
-        public GameObject GetObject()
+        public void GetObject(int id)
         {
-            GameObject nextObj = queue.Dequeue();
-            nextObj.transform.position = startPosition;
-            nextObj.SetActive(true);
-            return nextObj;
+            int index = 0;//连续生成时的位移量
+            Vector2 pos ;
+            for(int i = 0; i < TestSevice.GetGenerationType(id); i++)
+            {
+                GameObject nextObj = queue.Dequeue();
+                pos = startPosition;
+                pos.x += index * 2 * BasicDefine.BoxWidthLen;
+                nextObj.transform.position = pos;
+                nextObj.SetActive(true);
+                index++;
+            }
         }
 
     }

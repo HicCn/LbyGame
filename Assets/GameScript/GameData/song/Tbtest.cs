@@ -11,34 +11,34 @@ using SimpleJSON;
 
 
 
-namespace cfg
+namespace cfg.song
 { 
 
-public sealed partial class TBlogic
+public sealed partial class Tbtest
 {
-    private readonly Dictionary<int, logic> _dataMap;
-    private readonly List<logic> _dataList;
+    private readonly Dictionary<int, song.test> _dataMap;
+    private readonly List<song.test> _dataList;
     
-    public TBlogic(JSONNode _json)
+    public Tbtest(JSONNode _json)
     {
-        _dataMap = new Dictionary<int, logic>();
-        _dataList = new List<logic>();
+        _dataMap = new Dictionary<int, song.test>();
+        _dataList = new List<song.test>();
         
         foreach(JSONNode _row in _json.Children)
         {
-            var _v = logic.Deserializelogic(_row);
+            var _v = song.test.Deserializetest(_row);
             _dataList.Add(_v);
             _dataMap.Add(_v.ID, _v);
         }
         PostInit();
     }
 
-    public Dictionary<int, logic> DataMap => _dataMap;
-    public List<logic> DataList => _dataList;
+    public Dictionary<int, song.test> DataMap => _dataMap;
+    public List<song.test> DataList => _dataList;
 
-    public logic GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public logic Get(int key) => _dataMap[key];
-    public logic this[int key] => _dataMap[key];
+    public song.test GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public song.test Get(int key) => _dataMap[key];
+    public song.test this[int key] => _dataMap[key];
 
     public void Resolve(Dictionary<string, object> _tables)
     {

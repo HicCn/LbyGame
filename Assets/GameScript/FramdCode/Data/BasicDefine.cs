@@ -31,4 +31,9 @@ public class BasicDefine : MonoBehaviour
     ///</summary>
     public static float BoxSpeed = 8f;
 
+
+    public enum isComputer
+    {
+        w,a,s,d,b
+    }
 }

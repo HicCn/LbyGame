@@ -18,15 +18,15 @@ public sealed partial class textual :  Bright.Config.BeanBase
 {
     public textual(JSONNode _json) 
     {
-        { if(!_json["storyID"].IsNumber) { throw new SerializationException(); }  StoryID = _json["storyID"]; }
+        { if(!_json["ID"].IsNumber) { throw new SerializationException(); }  ID = _json["ID"]; }
         { if(!_json["storyChapter"].IsString) { throw new SerializationException(); }  StoryChapter = _json["storyChapter"]; }
         { if(!_json["playInput"].IsString) { throw new SerializationException(); }  PlayInput = _json["playInput"]; }
         PostInit();
     }
 
-    public textual(int storyID, string storyChapter, string playInput ) 
+    public textual(int ID, string storyChapter, string playInput ) 
     {
-        this.StoryID = storyID;
+        this.ID = ID;
         this.StoryChapter = storyChapter;
         this.PlayInput = playInput;
         PostInit();
@@ -40,7 +40,7 @@ public sealed partial class textual :  Bright.Config.BeanBase
     /// <summary>
     /// 故事序号
     /// </summary>
-    public int StoryID { get; private set; }
+    public int ID { get; private set; }
     /// <summary>
     /// 故事内容
     /// </summary>
@@ -65,7 +65,7 @@ public sealed partial class textual :  Bright.Config.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "StoryID:" + StoryID + ","
+        + "ID:" + ID + ","
         + "StoryChapter:" + StoryChapter + ","
         + "PlayInput:" + PlayInput + ","
         + "}";

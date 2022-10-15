@@ -13,10 +13,8 @@ public class Luban
 
     public static Tables Instane()
     {
-        if (TableServe == null)
-        {
-            TableServe = new Tables(Loader);
-        }
+
+        TableServe ??= new Tables(Loader);
         return TableServe;
     }
 
