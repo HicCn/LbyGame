@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GameScript\FramdCode\Data\textual.cs" />
     <Compile Include="Assets\TableData\LubanLib\ByteBuf.cs" />
     <Compile Include="Assets\GameScript\FramdCode\MapBoxMove.cs" />
     <Compile Include="Assets\GameScript\FramdCode\LogicalControl.cs" />
     <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONDotNetTypes.cs" />
     <Compile Include="Assets\TableData\LubanLib\ITypeId.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\Luban.cs" />
     <Compile Include="Assets\GameScript\FramdCode\Data\BasicDefine.cs" />
     <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONBinary.cs" />
     <Compile Include="Assets\GameScript\GameData\logic.cs" />
@@ -72,12 +74,14 @@
     <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSONUnity.cs" />
     <Compile Include="Assets\TableData\LubanLib\SimpleJSON\SimpleJSON.cs" />
     <Compile Include="Assets\GameScript\FramdCode\MapBoxControl.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\logic.cs" />
     <Compile Include="Assets\GameScript\GameData\Tables.cs" />
     <Compile Include="Assets\GameScript\FramdCode\GamerControl.cs" />
     <Compile Include="Assets\GameScript\StartGame.cs" />
-    <Compile Include="Assets\GameScript\FramdCode\Data\textual.cs" />
-    <Compile Include="Assets\GameScript\FramdCode\Data\logic.cs" />
-    <Compile Include="Assets\GameScript\FramdCode\Data\Luban.cs" />
+    <Compile Include="Assets\GameScript\GameData\song\test.cs" />
+    <Compile Include="Assets\GameScript\GameData\song\Tbtest.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\Test.cs" />
+    <Compile Include="Assets\GameScript\FramdCode\Data\songBasic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TableData\LubanLib\SimpleJSON\Changelog.txt" />
