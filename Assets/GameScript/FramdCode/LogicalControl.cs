@@ -10,6 +10,12 @@ namespace FramdCode
 
             return logicalControl;
         }
+
+        /// <summary>
+        /// Ñ¡Æ×·½·¨
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public songBasic choiceSong(int id)
         {
 

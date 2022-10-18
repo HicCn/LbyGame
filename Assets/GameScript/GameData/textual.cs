@@ -20,15 +20,13 @@ public sealed partial class textual :  Bright.Config.BeanBase
     {
         { if(!_json["ID"].IsNumber) { throw new SerializationException(); }  ID = _json["ID"]; }
         { if(!_json["storyChapter"].IsString) { throw new SerializationException(); }  StoryChapter = _json["storyChapter"]; }
-        { if(!_json["playInput"].IsString) { throw new SerializationException(); }  PlayInput = _json["playInput"]; }
         PostInit();
     }
 
-    public textual(int ID, string storyChapter, string playInput ) 
+    public textual(int ID, string storyChapter ) 
     {
         this.ID = ID;
         this.StoryChapter = storyChapter;
-        this.PlayInput = playInput;
         PostInit();
     }
 
@@ -45,10 +43,6 @@ public sealed partial class textual :  Bright.Config.BeanBase
     /// 故事内容
     /// </summary>
     public string StoryChapter { get; private set; }
-    /// <summary>
-    /// 大写WASD代表点按已经需要按下的按键，B表示长按开始，-表示长按中，b表示长按结束
-    /// </summary>
-    public string PlayInput { get; private set; }
 
     public const int __ID__ = -1417817325;
     public override int GetTypeId() => __ID__;
@@ -67,7 +61,6 @@ public sealed partial class textual :  Bright.Config.BeanBase
         return "{ "
         + "ID:" + ID + ","
         + "StoryChapter:" + StoryChapter + ","
-        + "PlayInput:" + PlayInput + ","
         + "}";
     }
     

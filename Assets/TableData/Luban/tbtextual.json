@@ -1,27 +1,22 @@
 [
   {
     "ID": 0,
-    "storyChapter": "小明看见有座山",
-    "playInput": "SSSDBbA"
+    "storyChapter": "小明看见有座山"
   },
   {
     "ID": 1,
-    "storyChapter": "突然很想搬走它",
-    "playInput": "asBbB-b"
+    "storyChapter": "突然很想搬走它"
   },
   {
     "ID": 2,
-    "storyChapter": "突然好想睡觉啊",
-    "playInput": "asBbB-b"
+    "storyChapter": "突然好想睡觉啊"
   },
   {
     "ID": 3,
-    "storyChapter": "搬了五百年，终于搬完拉",
-    "playInput": "ASB-bWASDW"
+    "storyChapter": "搬了五百年，终于搬完拉"
   },
   {
     "ID": 4,
-    "storyChapter": "搬了三天，摆烂了",
-    "playInput": "AWSDB-b"
+    "storyChapter": "搬了三天，摆烂了"
   }
 ]

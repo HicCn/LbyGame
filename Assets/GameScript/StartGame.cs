@@ -8,8 +8,8 @@ public class StartGame : MonoBehaviour
     public static float DecisionLine = 0;
     public static int score = 0;
 
-    float mainTime = 0;
-    int index;
+    int CreateId;
+
 
     LogicalControl logicalControl;
     MapBoxControl boxControl;
@@ -20,11 +20,13 @@ public class StartGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        index = 0;
+        CreateId = 0;
         logicalControl = LogicalControl.Instance();
         boxControl = MapBoxControl.Instance();
         exmSong = logicalControl.choiceSong(1);
         gamerControl = GamerControl.Instance();
+        gamerControl.mainTime = 0;//初始化玩家开始游戏
+        gamerControl.GetSong(exmSong);
     }
 
     private void Awake()
@@ -34,26 +36,24 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gamerControl.mainTime += Time.deltaTime * 1000;//主计时器  
+
         //玩家操作部分
-        Debug.Log(gamerControl.GetPlayerDownClick());
+        gamerControl.GetPlayerDownClick();
 
         //生成砖块部分
-        if (index >= exmSong.GetLen())
+        if (CreateId < exmSong.GetLen())
         {
-            ExitGame();
-        }
-        else
-        {
-            mainTime += Time.deltaTime * 1000;//主计时器  
-            if (mainTime > exmSong.GetGenerationTime(index))
+            if (gamerControl.mainTime >= exmSong.GetGenerationTime(CreateId))
             {
-                boxControl.GetObject(index);
-                index++;
+                boxControl.GetObject(CreateId);
+                CreateId++;
             }
         }
     }
     void ExitGame()
     {
         Debug.Log("单局结束");
+        Time.timeScale = 0;
     }
 }

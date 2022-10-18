@@ -12,7 +12,7 @@ namespace FramdCode
         Test TestSevice = new();
         static readonly Queue<GameObject> queue = new();
         //对象池定义
-        Vector2 startPosition = new Vector2(BasicDefine.MapWidthLen+2, BasicDefine.startPositionY);
+        Vector2 startPosition = new Vector2(BasicDefine.MapWidthLen+BasicDefine.BoxWidthLen, BasicDefine.startPositionY);
 
         private MapBoxControl()
         {

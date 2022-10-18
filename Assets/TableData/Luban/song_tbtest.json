@@ -4,7 +4,7 @@
     "generationDowmTime": 1000,
     "generationType": 1,
     "isEnd": false,
-    "isButton": "w"
+    "isButton": "a"
   },
   {
     "ID": 1,
@@ -25,7 +25,7 @@
     "generationDowmTime": 8000,
     "generationType": 1,
     "isEnd": true,
-    "isButton": "s"
+    "isButton": "a"
   },
   {
     "ID": 4,
@@ -46,7 +46,7 @@
     "generationDowmTime": 16000,
     "generationType": 1,
     "isEnd": true,
-    "isButton": "w"
+    "isButton": "a"
   },
   {
     "ID": 7,
@@ -67,6 +67,6 @@
     "generationDowmTime": 30000,
     "generationType": 1,
     "isEnd": true,
-    "isButton": "w"
+    "isButton": "a"
   }
 ]

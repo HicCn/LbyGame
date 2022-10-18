@@ -8,9 +8,9 @@ public class textual
         return item.StoryChapter;
     }
 
-    public static string GetPlayInput(int id)
-    {
-        var item = Luban.Instane().Tbtextual.Get(id);
-        return item.PlayInput;
-    }
+    //public static string GetPlayInput(int id)
+    //{
+    //    var item = Luban.Instane().Tbtextual.Get(id);
+    //    return item.PlayInput;
+    //}
 }
