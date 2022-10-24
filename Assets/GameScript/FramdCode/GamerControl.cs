@@ -19,7 +19,7 @@ namespace FramdCode
 
         public float mainTime;
         /// <summary>
-        /// 玩家结算分数
+        /// 玩家阶段结算分数
         /// </summary>
         int flowScore = 0;
         /// <summary>
@@ -28,10 +28,9 @@ namespace FramdCode
         int flowIndex = 1;
 
         /// <summary>
-        /// 总计数
+        /// 出现的格子计数
         /// </summary>
         int CountId;
-
         /// <summary>
         /// 主角位置
         /// </summary>
@@ -116,6 +115,7 @@ namespace FramdCode
             }
         }
 
+        //点按的情况
         void ProcessShortInput(char key,int id)
         {
             float isScoring =Mathf.Abs(mainTime - toTrueClickTime(id));
@@ -138,6 +138,7 @@ namespace FramdCode
 
             
         }
+        //长按的情况
         void ProcessLongInput(int id)
         {
             float isScoring = Mathf.Abs(mainTime - toTrueClickTime(id));//点击时间和正确时间的偏差量，伪判定是需要加上长条的位移时间
@@ -172,6 +173,7 @@ namespace FramdCode
             exmSong = song;
         }
 
+        //放回玩家应该正确点击的时间（按下）对长按的抬起在长按的情况中处理
         float toTrueClickTime(int index)
         {
             if(index >= exmSong.GetLen())
@@ -220,27 +222,20 @@ namespace FramdCode
             }
         }
 
+        //计算单次得分
         int GetAddScore(float isScoring, float isScoringTime)
         {
             int GetScore = 0;
-            string t = "第" + CountId + "个";
             if (isScoring < isScoringTime * BasicDefine.GetA)
             {
-                t += "得到3分";
-                Debug.Log(t);
-
                 GetScore = 3;
             }
             else if (isScoring < isScoringTime * BasicDefine.GetB)
             {
-                t += "得到2分";
-                Debug.Log(t);
                 GetScore = 2;
             }
             else if (isScoring < isScoringTime * BasicDefine.GetC)
             {
-                t += "得到1分";
-                Debug.Log(t);
                 GetScore = 1;
             }
             return GetScore;
