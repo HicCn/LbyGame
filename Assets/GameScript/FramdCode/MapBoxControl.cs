@@ -60,6 +60,13 @@ namespace FramdCode
                 index++;
             }
         }
-
+        public void GetObject()
+        {
+            
+                GameObject nextObj = queue.Dequeue();
+                nextObj.transform.position = startPosition;
+                nextObj.SetActive(true);
+            
+        }
     }
 }
