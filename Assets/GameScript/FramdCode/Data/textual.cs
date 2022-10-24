@@ -1,7 +1,7 @@
 public class textual
 {
 
-    public static string GetChapter(int id)
+    public static string[] GetChapter(int id)
     {
 
         var item = Luban.Instane().Tbtextual.Get(id);

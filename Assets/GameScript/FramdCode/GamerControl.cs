@@ -195,19 +195,20 @@ namespace FramdCode
                 float tempScore = flowScore / flowIndex * 3;
                 if (tempScore > BasicDefine.isNextA)
                 {
-                    Debug.Log("得到3分");
+                    //向消息队列中添加下一列数据
+                    LogicalControl.switchTextual(0);
                 }
                 else if (tempScore > BasicDefine.isNextB)
                 {
-                    Debug.Log("得到2分");
+                    LogicalControl.switchTextual(1);
                 }
                 else if (tempScore > BasicDefine.isNextC)
                 {
-                    Debug.Log("得到1分");
+                    LogicalControl.switchTextual(2);
                 }
                 else
                 {
-                    Debug.Log("得到0分");
+                    LogicalControl.switchTextual(3);
                 }
                 flowIndex = 0;
                 flowScore = 0;
