@@ -19,11 +19,11 @@ public sealed partial class textual :  Bright.Config.BeanBase
     public textual(JSONNode _json) 
     {
         { if(!_json["ID"].IsNumber) { throw new SerializationException(); }  ID = _json["ID"]; }
-        { if(!_json["storyChapter"].IsString) { throw new SerializationException(); }  StoryChapter = _json["storyChapter"]; }
+        { var __json0 = _json["storyChapter"]; if(!__json0.IsArray) { throw new SerializationException(); } int _n0 = __json0.Count; StoryChapter = new string[_n0]; int __index0=0; foreach(JSONNode __e0 in __json0.Children) { string __v0;  { if(!__e0.IsString) { throw new SerializationException(); }  __v0 = __e0; }  StoryChapter[__index0++] = __v0; }   }
         PostInit();
     }
 
-    public textual(int ID, string storyChapter ) 
+    public textual(int ID, string[] storyChapter ) 
     {
         this.ID = ID;
         this.StoryChapter = storyChapter;
@@ -42,7 +42,7 @@ public sealed partial class textual :  Bright.Config.BeanBase
     /// <summary>
     /// 故事内容
     /// </summary>
-    public string StoryChapter { get; private set; }
+    public string[] StoryChapter { get; private set; }
 
     public const int __ID__ = -1417817325;
     public override int GetTypeId() => __ID__;
@@ -60,7 +60,7 @@ public sealed partial class textual :  Bright.Config.BeanBase
     {
         return "{ "
         + "ID:" + ID + ","
-        + "StoryChapter:" + StoryChapter + ","
+        + "StoryChapter:" + Bright.Common.StringUtil.CollectionToString(StoryChapter) + ","
         + "}";
     }
     
