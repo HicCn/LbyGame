@@ -39,6 +39,7 @@ public class CollectSong : MonoBehaviour
             index++;
             if (inputKey == KeyCode.End)
             {
+                data.dataPack.Add(tempData);
                 Save(data);
                 Time.timeScale = 0;
             }
