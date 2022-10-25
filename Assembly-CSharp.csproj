@@ -292,6 +292,7 @@
     <Compile Include="Assets\FairyGUI\Scripts\Tween\TweenValue.cs" />
     <Compile Include="Assets\FairyGUI\Extensions\TextMeshPro\TMPFont.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Gesture\LongPressGesture.cs" />
+    <Compile Include="Assets\GameScript\AnimatorName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TableData\LubanLib\SimpleJSON\Changelog.txt" />
