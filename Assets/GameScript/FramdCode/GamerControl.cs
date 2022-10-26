@@ -17,6 +17,7 @@ namespace FramdCode
 
         songBasic exmSong;//本轮谱面
 
+        [HideInInspector]
         public float mainTime;
         /// <summary>
         /// 玩家阶段结算分数
@@ -59,6 +60,7 @@ namespace FramdCode
             {
                 if (res == ' ')
                     res = 'a';
+                EventModel.Notify(EventId.boxMove);
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
@@ -87,7 +89,7 @@ namespace FramdCode
                     res = 'b';
                 isPress = false;
             }
-            //如果没有点击，则触发惩罚
+            
             if(exmSong.GetGenerationType(CountId) == 1)
             {
                 if (toTrueClickTime(CountId)+GetSpeedTime()/2 < mainTime)
@@ -96,7 +98,6 @@ namespace FramdCode
                 }
                 else if (res != ' ')
                 {
-                    Debug.Log(CountId);
                     ProcessShortInput(res, CountId);
 
                 }
@@ -109,7 +110,6 @@ namespace FramdCode
                 }
                 else if (res != ' ')
                 {
-                    Debug.Log(CountId);
                     ProcessLongInput(CountId);
                 }
             }

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicDefine : MonoBehaviour
+namespace FramdCode
+{
+    public class BasicDefine 
 {
     ///<summary>
     ///对象池大小
@@ -12,14 +14,14 @@ public class BasicDefine : MonoBehaviour
     ///<summary>
     ///地块生成位置纵坐标
     ///</summary>
-    public static int startPositionY = 0;
+    public static float startPositionY = -5.9f;
 
-
+    public static float BoxWidth = 6.8f;
 
     ///<summary>
     ///地块宽度的一半
     ///</summary>
-    public static int BoxWidthLen = 2;
+    public static float BoxWidthLen = 3.4f;
 
     ///<summary>
     ///地图宽度
@@ -52,3 +54,5 @@ public class BasicDefine : MonoBehaviour
         w,a,s,d,b
     }
 }
+}
+
